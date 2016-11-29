@@ -1,23 +1,19 @@
 <?php
-
-
 function cards_menu() {
-
-$friends = array('Angie', 'Evan', 'Brian');
+  $friends = array('Angie' => 'earings', 'Evan' => 'meat log', 'Brian' => 'lint');
   $items = array();
-  foreach ($friends as $friend) {
-    $items[$friend] = array(
-      'title' => 'Hello ' . $friend . '!',
+  foreach ($friends as $key => $value) {
+    $items[$key] = array(
+      'title' => 'Hello ' . $key . '!',
       'page callback' => 'friends_card',
-      'page arguments' => array($friend),
+      'page arguments' => array($key, $value),
       'access callback' => TRUE,
       'type' => MENU_NORMAL_ITEM,
     );
   }
   return $items;
-
 }
 
-function friends_card($arg) {
-  return '<p>Thanks for nuthin, '. $arg . '!';
+function friends_card($arg1, $arg2) {
+  return '<p>Thanks for the ' . $arg2 . ', ' . $arg1 . '!';
 }
