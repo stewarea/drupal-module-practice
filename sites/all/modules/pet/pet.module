@@ -1,0 +1,15 @@
+<?php
+  function pet_menu() {
+    $items = array();
+    $items['Mazzy'] = array(
+      'title' => 'Meet Mazzy!',
+      'page callback' => 'meet_mazzy',
+      'access callback' => TRUE,
+      'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+  }
+
+  function meet_mazzy() {
+    return "<p>My baby dog Mazzy Pooperini. She was an italian english bulldog. Died March 2015.</p><br><img src='sites/all/modules/pet/mazzy.jpg'>";
+  }
