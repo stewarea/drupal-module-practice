@@ -1,0 +1,5 @@
+name = cards
+description = Display cards.
+package = Epicodus Examples
+core = 7.x
+files[] = cards.module
