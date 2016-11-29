@@ -11,5 +11,11 @@
   }
 
   function meet_mazzy() {
-    return "<p>My baby dog Mazzy Pooperini. She was an italian english bulldog. Died March 2015.</p><br><img src='sites/all/modules/pet/mazzy.jpg'>";
+    // $path = drupal_get_path('module', 'pet');
+    $path = drupal_get_path('module', 'pet');
+    $image = $path . '/Mazzy.jpg';
+    // $css = $path . 'styles.css';
+    // drupal_add_css($css);
+    $link = "<a href = 'https://en.wikipedia.org/wiki/Bulldog'>Wiki</a>";
+    return "<p>My baby dog Mazzy Pooperini. She was an italian english bulldog ( see info at " . $link . "). Died March 2015.</p><br><img src='" . $image . "' class= 'mazzy'/>";
   }
