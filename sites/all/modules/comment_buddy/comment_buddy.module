@@ -1,0 +1,19 @@
+<?php
+  function comment_buddy_menu() {
+    $items = array();
+    $items['delete_comment'] = array(
+      'title' => 'Comment Deleted',
+      'page callback' => 'comment_buddy_delete',
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK
+    );
+    return $items;
+  }
+
+  // function comment_buddy_delete() {
+  //   return '<p>Comment deleted. Good work eating your words.</p>';
+  // }
+
+  function comment_comment_delete() {
+    drupal_set_message("Comment deleted. Good work eating your words");
+  }

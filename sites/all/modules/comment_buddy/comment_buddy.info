@@ -1,0 +1,5 @@
+name = comment_buddy
+description = Display comment statuses
+package = Epicodus Examples
+core = 7.x
+files[] = comment_buddy.module
